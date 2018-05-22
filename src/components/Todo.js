@@ -4,8 +4,10 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 
 const Todo = ({ onClick, completed, text }) => {
+  debugger
   return (
-    <li onClick={onClick} style={{textDecoration: completed ? 'line-though' : 'none'}}>
+    <li onClick={onClick} style={{textDecoration: completed ? 'line-through' : 'none'
+  }}>
       {text}
     </li>
   )
