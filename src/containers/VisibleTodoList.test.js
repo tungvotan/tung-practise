@@ -3,7 +3,6 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
-import toJson from 'enzyme-to-json';
 import VisibleTodoList from './VisibleTodoList';
 
 const setup = (setupProps = { filter: 'SHOW_ALL' }) => {
@@ -41,7 +40,7 @@ describe('VisibleTodoList', () => {
     expect(wrapper).toMatchSnapshot();
   });
   test('renders without crashing', () => {
-    const { wrapper } = setup({ filter: 'ERROR_FILTER' });
-    expect(wrapper).toThrowError(Error);
+    const caller = () => { setup({ filter: 'ERROR_FILTER' }); };
+    expect(caller).toThrow("Unknown filter: ERROR_FILTER");
   });
 });
