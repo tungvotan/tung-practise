@@ -3,5 +3,41 @@
   "plugins": [
     "react",
     "flowtype"
-  ]
+  ],
+  "extends": "react-app",
+
+  "rules": {
+    "jsx-a11y/href-no-hash": "off",
+    "react/prop-types": 0,
+    "react/no-unused-prop-types": 0,
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "max-len": [
+      "error",
+      120,
+      2
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": [
+      "error",
+      "never"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "_",
+        "caughtErrorsIgnorePattern": "_"
+      }
+    ]
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
 }
