@@ -3,8 +3,13 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 
-const Todo = ({ onClick, completed, text }) => {
-  debugger
+type TodoPropsType = {
+  onClick: () => void,
+  completed: boolean,
+  text: string
+}
+
+const Todo = ({ onClick, completed, text }: TodoPropsType) => {
   return (
     <li onClick={onClick} style={{ textDecoration: completed ? 'line-through' : 'none'
   }}>

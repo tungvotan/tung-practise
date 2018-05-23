@@ -5,7 +5,6 @@
     "flowtype"
   ],
   "extends": "react-app",
-
   "rules": {
     "jsx-a11y/href-no-hash": "off",
     "react/prop-types": 0,
@@ -27,13 +26,16 @@
       "error",
       "never"
     ],
-    "no-unused-vars": [
-      "error",
+    "flowtype/require-parameter-type": [
+      2,
       {
-        "varsIgnorePattern": "_",
-        "caughtErrorsIgnorePattern": "_"
+        "excludeArrowFunctions": true
       }
     ]
+  },
+  "root": true,
+  "env": {
+    "es6": true
   },
   "settings": {
     "flowtype": {

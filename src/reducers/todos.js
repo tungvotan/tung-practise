@@ -1,6 +1,18 @@
 // @flow
 
-const todos = (state = [], action) => {
+type StateProps = {
+  +id: number,
+  +text: string,
+  +completed: boolean
+}
+
+type ActionProps = {
+  +type: string,
+  +id: number,
+  +text: string
+}
+
+const todos = (state: Array<StateProps> = [], action: ActionProps) : Array<StateProps> => {
   switch (action.type) {
     case 'ADD_TODO':
       return [

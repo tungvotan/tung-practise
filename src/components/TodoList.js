@@ -3,7 +3,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Todo from './Todo'
 
-const TodoList = ({ todos, toggleTodo }) => (
+type TodoListPropsType = {
+  todos: Object,
+  toggleTodo: number => void
+}
+
+const TodoList = ({ todos, toggleTodo } : TodoListPropsType) => (
   <ul>
     {todos.map(todo =>
       (<Todo
