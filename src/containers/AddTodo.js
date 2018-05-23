@@ -1,10 +1,13 @@
 // @flow
 
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
-
-class AddTodo extends React.Component<*> {
+type State = {
+  value: string
+}
+class AddTodo extends Component<*, State> {
+  
   state = {
     value: ''
   }

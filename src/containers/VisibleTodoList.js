@@ -6,6 +6,7 @@ import TodoList from '../components/TodoList';
 import type { Dispatch, TodosProps, State } from '../types';
 
 const getVisibleTodos = (todos: TodosProps, filter: string) => {
+  console.log('xtungvo', filter)
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos
