@@ -3,10 +3,9 @@
 import { connect } from 'react-redux';
 import { toggleTodo, VisibilityFilters } from '../actions';
 import TodoList from '../components/TodoList';
-import type { Dispatch, TodosProps, State } from '../types';
+import type { TodosProps, State } from '../types';
 
 const getVisibleTodos = (todos: TodosProps, filter: string) => {
-  console.log('xtungvo', filter)
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos
@@ -23,11 +22,7 @@ const mapStateToProps = (state: State) => ({
   todos: getVisibleTodos(state.todos, state.visibilityFilter)
 })
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
-  toggleTodo: (id: number) => dispatch(toggleTodo(id))
-})
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { toggleTodo }
 )(TodoList)

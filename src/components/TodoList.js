@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import Todo from './Todo'
 
 type TodoListPropsType = {
-  todos: Object,
+  todos: Array<Object>,
   toggleTodo: number => void
 }
 

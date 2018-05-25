@@ -22,10 +22,7 @@
       "error",
       "always"
     ],
-    "space-before-function-paren": [
-      "error",
-      "never"
-    ],
+    "space-before-function-paren": 0,
     "flowtype/require-parameter-type": [
       2,
       {
